@@ -1,0 +1,28 @@
+﻿using AlunosMVC.Models;
+
+@model List<AlunosMVC.Models.Aluno>
+
+<h1>Lista de Alunos</h1>
+
+<table class= "table" >
+    < thead >
+        < tr >
+            < th > ID </ th >
+            < th > Nome </ th >
+            < th > Idade </ th >
+            < th > Curso </ th >
+        </ tr >
+    </ thead >
+
+    < tbody >
+        @foreach(var aluno in Model)
+        {
+            < tr >
+                < td > @aluno.Id </ td >
+                < td > @aluno.Nome </ td >
+                < td > @aluno.Idade </ td >
+                < td > @aluno.Curso </ td >
+            </ tr >
+        }
+    </ tbody >
+</ table >
